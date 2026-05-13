@@ -33,10 +33,7 @@ __pycache__/
 *.snm
 *.vrb
 *Notes.bib
-
-# Keep main.pdf? Your call. Many repos commit it for convenience;
-# others let CI/Overleaf regenerate. Uncomment to ignore:
-# main.pdf
+tex/main.pdf
 
 # ============================================================
 # OmniGraffle
