@@ -5,8 +5,12 @@ operator on the vacuum:
 
     |ψ⟩ = S(r) |0⟩
 
-with S(r) = exp((r/2)(a² − a†²)) in QuTiP's convention. In natural units
-this gives Δx = e^(−r)/√2, Δp = √2 e^r — Heisenberg-saturated for all r.
+with S(r) = exp((r/2)(a² − a†²)) in QuTiP's convention. In the package
+convention Δx = √2 σ_x, this gives
+
+    Δx = e^(−r),   Δp = e^(+r),   Δx Δp = ℏ = 1,
+
+so the state saturates the Robertson–Schrödinger bound for every r.
 """
 
 from __future__ import annotations

@@ -1,13 +1,17 @@
 """Cat states: coherent superpositions of n coherent states in phase space.
 
-Four configurations, all with adjacent-lobe distance 2·p_max from each other:
+Four configurations, all sized so the most distant lobe sits at radius
+≈ p_max·√2 from the origin in the worst case:
 
-  * n=2:        lobes at (0, ±p_max). N–S.
-  * n=3:        equilateral triangle pointing up: apex (0, +p_max),
-                base (±2·p_max/√3, −p_max).
-  * n=4 (diag): square at corners (±p_max, ±p_max).
+  * n=2:        lobes at (0, ±p_max). North–south, separation 2·p_max.
+  * n=3:        equilateral triangle: apex (0, +p_max), base
+                (±2·p_max/√3, −p_max). Adjacent-lobe distance is
+                2·p_max·√(4/3) ≈ 2.309·p_max — equilateral, but the
+                side is not 2·p_max.
+  * n=4 (diag): square at corners (±p_max, ±p_max). Side 2·p_max.
   * n=4 (axis): 45° rotation of diag — lobes at (±p_max√2, 0) and
-                (0, ±p_max√2). This is Zurek's compass state.
+                (0, ±p_max√2), forming a square of side 2·p_max
+                rotated by π/4. This is Zurek's compass state.
 
 The wavefunction is a sum of coherent states ``qt.coherent(N, αₖ)`` with
 ``αₖ = (qₖ + i pₖ)/√2`` placed at each lobe.
@@ -38,8 +42,8 @@ def cat_lobe_positions(
 ) -> tuple[np.ndarray, np.ndarray]:
     """Lobe positions (q, p) for an n-cat configuration.
 
-    All configurations are scaled so adjacent lobes sit 2·p_max apart.
-    For axis, this places lobes at ±p_max√2 on each axis.
+    See module docstring for the exact geometry of each configuration
+    and the resulting adjacent-lobe distances.
     """
     if n_cats == 2:
         return np.array([0.0, 0.0]), np.array([p_max, -p_max])

@@ -59,6 +59,13 @@ def numerical_covariance(
     ⟨x⟩, ⟨x²⟩ from |ψ|²; ⟨p²⟩ from ℏ² ∫|dψ/dx|² dx (valid for normalizable ψ
     where boundary terms vanish). σ_xp is taken to be zero — exact for all
     states in the manuscript.
+
+    Assumption: ⟨p⟩ = 0. For the bound eigenstates and parity-symmetric
+    cat configurations in this paper, this is exact (a real ψ that
+    vanishes at the boundary has ⟨p⟩ = 0 by integration by parts).
+    For states with running phase (coherent states off the origin), the
+    caller must instead compute ⟨p⟩ = −iℏ ∫ ψ* ψ' dx and subtract it
+    from the ⟨p²⟩ moment before forming σ_pp.
     """
     dx = float(x_grid[1] - x_grid[0])
     # Re-normalize so the integral works in absolute terms.
@@ -72,6 +79,8 @@ def numerical_covariance(
     sigma_xx = float(np.sum((x_grid - x_mean) ** 2 * prob) * dx)
 
     # ⟨p²⟩ = ℏ² ∫ |dψ/dx|² dx, evaluated by finite differences.
+    # Valid for normalizable ψ with vanishing boundary terms, and assumes
+    # ⟨p⟩ = 0 (see docstring).
     dpsi = np.diff(psi_n) / dx
     sigma_pp = float(hbar ** 2 * np.sum(np.abs(dpsi) ** 2) * dx)
 
@@ -119,7 +128,11 @@ def solve_schrodinger(
     """Time-independent Schrödinger eigenvalue problem on a uniform grid.
 
     H ψ = E ψ with H = -ℏ²/(2m) d²/dx² + V(x). Finite-difference (3-point
-    stencil), then `scipy.sparse.linalg.eigsh` for the lowest n_states.
+    stencil), then ``scipy.sparse.linalg.eigsh`` in shift-invert mode
+    (``sigma = V.min() − 1``) to grab the lowest n_states. Shift-invert
+    avoids the slow convergence of ``which='SM'`` on large grids by
+    converting the smallest-eigenvalue search into a largest-eigenvalue
+    search of (H − σI)⁻¹.
 
     The grid boundaries must be chosen so V at the edges substantially
     exceeds the highest eigenvalue of interest, so the implicit Dirichlet
@@ -140,9 +153,12 @@ def solve_schrodinger(
         format="csr",
     )
 
-    # sigma=v_min - 1 lets eigsh use shift-invert to grab the lowest n_states.
+    # Shift-invert: sigma below V.min() guarantees H - sigma·I is positive
+    # definite, and 'LM' on (H - sigma·I)^{-1} finds the eigenvalues nearest
+    # sigma — i.e. the lowest of H.
+    sigma_shift = float(V_vec.min()) - 1.0
     energies, psi_matrix = eigsh(
-        H, k=n_states, which="SM",
+        H, k=n_states, sigma=sigma_shift, which="LM",
         v0=np.ones(nx) / np.sqrt(nx),     # deterministic starting vector
     )
     order = np.argsort(energies)
