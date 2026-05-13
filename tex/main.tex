@@ -38,12 +38,12 @@ This is the abstract.
 
 We work in one degree of freedom and align coordinates with the principal axes of the state's covariance ellipse. The Robertson--Schr\"odinger covariance term~\cite{robertson1929,schrodinger1930} vanishes, leaving the position spread $\Delta x = \sqrt{2}\sigma_x$ and the momentum spread $\Delta p = \sqrt{2}\sigma_p$. The symplectic results we use~\cite{degosson2013qblobs,degossoncharlyne2022} extend without modification to higher dimensions and to the full off-diagonal covariance.
 
-The state's covariance defines two phase-space cells (Fig.~\ref{fig:de_gosson_cells}). The extended cell, of action
+The state's covariance defines two phase-space cells (Fig.~\ref{fig:de_gosson_cells}). The extended cell, of action capacity
 \begin{equation}
 A = \pi\,\Delta x\,\Delta p \ge h/2,
 \label{eq:extended_cell}
 \end{equation}
-is the state's outer extent, floored at the quantum of action by Heisenberg. Inscribed within it is a one-parameter family of squeezed cells of fixed action
+is the state's outer extent. Inscribed within it is a one-parameter family of squeezed cells of fixed action capacity
 \begin{equation}
 a = \pi\,\delta_\parallel\,\delta_\perp = h/2
 \label{eq:squeezed_cell}
@@ -53,7 +53,7 @@ identified by de Gosson~\cite{degosson2013qblobs,degossoncharlyne2022}. The semi
 \delta_\parallel\,\delta_\perp = \hbar.
 \label{eq:polar_dual}
 \end{equation}
-The minor axis is squeezed below the coherent-state scale and the major axis is anti-squeezed above it. Their product is fixed at one quantum of action by Gromov's non-squeezing theorem~\cite{gromov1985}. As the orientation $\theta$ varies,
+The minor axis is considered squeezed and the major axis anti-squeezed. The area of the cell is fixed at $h/2$ by Gromov's non-squeezing theorem~\cite{gromov1985}. As the orientation $\theta$ varies,
 \begin{equation}
 \delta_\parallel(\theta) = \sqrt{\Delta x^2\cos^2\theta + \Delta p^2\sin^2\theta},
 \label{eq:delta_parallel}
@@ -62,26 +62,54 @@ The minor axis is squeezed below the coherent-state scale and the major axis is 
 \delta_\perp(\theta) = \hbar / \delta_\parallel(\theta),
 \label{eq:delta_perp}
 \end{equation}
-where $\theta$ is the rotated quadrature direction of continuous-variable tomography~\cite{vogelrisken1989,lvovsky2009}. At the principal-axis orientations $\theta = 0$ and $\theta = \pi/2$ (Fig.~\ref{fig:zurek_cells}), the minor axes reduce to the sub-Planck scales identified by Zurek~\cite{zurek2001},
+where $\theta$ is the rotated quadrature direction of continuous-variable tomography~\cite{vogelrisken1989,lvovsky2009}. At the principal-axis orientations $\theta = 0$ and $\theta = \pi/2$ (Fig.~\ref{fig:zurek_cells}), the minor axes reduce to the interference scales identified by Zurek~\cite{zurek2001},
 \begin{equation}
 \delta x = \frac{\hbar}{\Delta p}, \qquad \delta p = \frac{\hbar}{\Delta x}.
 \label{eq:zurek}
 \end{equation}
-The smallest cell the state can locally carry, the spacing of the peaks in its Wigner function, and the boundary at which $W$ changes sign-character are all the same length, set by the action of the state.
 
-\begin{figure}[t]
-\includegraphics[width=\columnwidth]{figures/eigen}
-\caption{Squeezed vacuum ($r=0.5$), harmonic oscillator $n=1$, Morse $n=8$,
-and double-well $n=5$.}
+% ===============================================================================
+%  THE BOUNDARY AND THE KERNEL
+% ===============================================================================
+
+The Wigner function of the state is
+\begin{equation}
+W(x,p) = \frac{1}{\pi\hbar}\int \psi^*(x+y)\,\psi(x-y)\,e^{2ipy/\hbar}\,dy.
+\label{eq:wigner}
+\end{equation}
+
+The kernel
+\begin{equation}
+K_\theta(x,p) = \frac{1}{\pi\hbar}\exp\!\left(-\frac{x_\theta^2}{\delta_\parallel^2} - \frac{p_\theta^2}{\delta_\perp^2}\right),
+\label{eq:Gtheta}
+\end{equation}
+with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos\theta$ has action capacity $h/2$. The state seen at this resolution is
+\begin{equation}
+P_\theta(x,p) = (W * K_\theta)(x,p).
+\label{eq:Ptheta}
+\end{equation}
+This is non-negative everywhere. The convolution of two Wigner functions equals the trace inner product of the corresponding density operators~\cite{degosson2005bullsci,degosson2013qblobs}, which is non-negative for any pair of states. The non-negativity is a standard fact of the de Gosson and quantum-optics literature. What is new is the kernel's uniqueness. Its covariance is fixed by the state, its action is fixed at $h/2$, and its orientation $\theta$ ranges over the inscribed family.
+
+% ===============================================================================
+%  DEMONSTRATION
+% ===============================================================================
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/eigen.pdf}
+\caption{\textbf{Eigenstates.} Squeezed vacuum at $r=0.5$, harmonic Fock state ($n=1$), Morse ($n=8$), and double-well ($n=5$). \textit{Left}, $W(x,p)$ with the extended cell and the $\theta=\pi/2$ squeezed cell overlaid. \textit{Center}, $W(x,0)$. \textit{Right}, $P_{\pi/2}(x,0)$.}
 \label{fig:eigen}
 \end{figure}
 
-\begin{figure}[t]
-\includegraphics[width=\columnwidth]{figures/cat}
-\caption{Cat states}
-\label{fig:cat}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/cats.pdf}
+\caption{\textbf{Cat states.} 2-cat, 3-cat, 4-cat square, and 4-cat compass states. Columns as in Fig.~\ref{fig:eigen}.}
+\label{fig:cats}
 \end{figure}
 
-%\bibliography{main}
+Figures~\ref{fig:eigen} and~\ref{fig:cats} show $P_{\pi/2}$ for eight states: squeezed vacuum, harmonic, Morse, and double-well eigenstates, and four cat configurations including Zurek's compass. With the kernel set from each state's covariance, the same number of positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$, without negativity.
+
+\bibliography{main}
 
 \end{document}
