@@ -1,4 +1,4 @@
-"""The three panels of each row in Figs. 3 and 4.
+"""The three panels of each row of the data figures.
 
 Column 1: Wigner heatmap with cell overlay (W(x, p) on a 2D phase-space view).
 Column 2: Wigner cross-section at p = 0 — black line, negative regions

@@ -1,19 +1,19 @@
-"""Squeezed vacuum state, row 1 of Fig. 3.
+"""Squeezed vacuum state.
 
-In natural units (ℏ = m = ω = 1), the position-squeezed vacuum at squeezing
-parameter r is
+The squeezed vacuum at parameter r is built by acting the QuTiP squeeze
+operator on the vacuum:
 
-    ψ_sq(x) = (π σ_x²)^(-1/4) exp(-x² / (2 σ_x²))
+    |ψ⟩ = S(r) |0⟩
 
-with σ_x = e^(-r) / √2. This gives Δx = e^(-r)/√2, Δp = √2 e^r — Heisenberg-
-saturated for every r.
+with S(r) = exp((r/2)(a² − a†²)) in QuTiP's convention. In natural units
+this gives Δx = e^(−r)/√2, Δp = √2 e^r — Heisenberg-saturated for all r.
 """
 
 from __future__ import annotations
 
-import numpy as np
+import qutip as qt
 
-from ..state import DisplayWindow, State, build_state
+from ..state import DisplayWindow, State, build_state_from_qobj
 
 
 def squeezed_vacuum_state(
@@ -21,24 +21,17 @@ def squeezed_vacuum_state(
     *,
     name: str | None = None,
     hbar: float = 1.0,
+    N: int = 80,
 ) -> State:
-    """Build a squeezed vacuum state at squeezing parameter r."""
-    sigma_x = np.exp(-r) / np.sqrt(2)
+    """Squeezed vacuum at squeezing parameter ``r``.
 
-    # Wavefunction sampling grid: dense enough for FFT-derived <p²> to be
-    # accurate, wide enough that ψ has decayed to floating-point noise at
-    # the edges.
-    x_psi = np.linspace(-15.0, 15.0, 6001)
-    psi = (1 / (np.pi * sigma_x ** 2)) ** 0.25 * np.exp(-x_psi ** 2 / (2 * sigma_x ** 2))
-
-    # Display window: minimal limits + empty ticks. build_state expands
-    # the window to fit the extended cell and chooses round-number ticks.
-    window = DisplayWindow(x_lim=0.0, p_lim=0.0)
-
-    return build_state(
+    ``N`` is the Fock-basis truncation. The default N=80 is comfortable
+    for r ≤ 1; very large r needs more.
+    """
+    psi = qt.squeeze(N, r) * qt.basis(N, 0)
+    return build_state_from_qobj(
         name=name or f"squeezed_vacuum_r{r:g}",
-        psi=psi,
-        x_grid_psi=x_psi,
-        window=window,
+        qobj=psi,
+        window=DisplayWindow(x_lim=0.0, p_lim=0.0),
         hbar=hbar,
     )

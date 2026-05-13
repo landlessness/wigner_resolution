@@ -1,15 +1,14 @@
-"""Double-well oscillator eigenstates, row 4 of Fig. 3.
+"""Double-well oscillator eigenstates.
 
 V(x) = -μ²/2 · x² + λ/4 · x⁴ with μ² = 4, λ = 1. Two symmetric wells at
 x = ±√(μ²/λ) = ±2. Barrier at the origin with height V_0 = μ⁴/(4λ) = 4.
 Harmonic frequency at each well minimum: ω_well = √2 · μ = 2√2.
 
 For n = 5 the eigenstate sits well above the barrier — a delocalized
-"cat-like" state straddling both wells, with rich nodal structure and
-strong Wigner negativity from the inter-well interference.
+state straddling both wells, with rich nodal structure and strong
+Wigner negativity from the inter-well interference.
 
-The potential is symmetric under parity, so ⟨x⟩ = 0 and the cell anchors
-at the origin.
+The potential is symmetric under parity, so ⟨x⟩ = 0.
 """
 
 from __future__ import annotations
@@ -17,7 +16,7 @@ from __future__ import annotations
 import numpy as np
 
 from ..quantum import solve_schrodinger
-from ..state import DisplayWindow, State, build_state
+from ..state import DisplayWindow, State, build_state_from_psi
 
 mu2 = 4.0
 lam = 1.0
@@ -47,11 +46,11 @@ def double_well_state(
     psi = soln.psi(n)
     x_psi = soln.x_grid
 
-    # build_state computes the display window from W's extent. The state
-    # is symmetric so it lands at x = 0.
+    # build_state_from_psi computes the display window from W's extent.
+    # The state is symmetric so it lands at x = 0.
     window = DisplayWindow(x_lim=0.0, p_lim=0.0)
 
-    return build_state(
+    return build_state_from_psi(
         name=name or f"double_well_n{n}",
         psi=psi,
         x_grid_psi=x_psi,

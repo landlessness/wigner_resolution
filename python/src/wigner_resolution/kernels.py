@@ -1,4 +1,4 @@
-"""The polar-dual kernel family K_θ (Mulloy 2026, Eq. 10).
+"""The polar-dual kernel family K_θ.
 
     K_θ(x, p) = (1/πℏ) exp(-x_θ²/δ‖² - p_θ²/δ⊥²)
 
@@ -14,8 +14,7 @@ a pure state.
 
 Implementation: a rotated 2D Gaussian with diagonal covariance
 Σ₀ = diag(δ‖²/2, δ⊥²/2) in the rotated frame, then Σ_θ = R(θ) Σ₀ R(θ)ᵀ in
-the unrotated phase-space frame. Evaluated via scipy.stats.multivariate_normal,
-which produces the closed-form 2D Gaussian.
+the unrotated phase-space frame. Evaluated via scipy.stats.multivariate_normal.
 """
 
 from __future__ import annotations

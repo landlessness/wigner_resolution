@@ -1,4 +1,4 @@
-"""Assemble the 4×3 grid of panels for Figs. 3 (eigen) and 4 (cats).
+"""Assemble the 4×3 grid of panels for the data figures.
 
 Layout: a clean 4×3 grid with fixed panel dimensions. The Wigner heatmap
 (column 1) has aspect='equal' so cell ellipses keep their true shape;

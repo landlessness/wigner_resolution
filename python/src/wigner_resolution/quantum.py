@@ -1,5 +1,15 @@
 """Quantum state geometry: Robertson-Schrödinger covariance from a sampled ψ(x).
 
+The currency of the paper is *action*. We work in natural units where ℏ = 1,
+m = 1, ω = 1 throughout. In these units:
+
+  * the quantum of action h/2 reduces to π
+  * the action capacity of a state is A = π Δx Δp, expressed as a multiple
+    of h/2 by the ratio A/(h/2) = Δx Δp / ℏ
+  * a Heisenberg-saturated state has A/(h/2) = 1
+  * the harmonic oscillator state |n⟩ has Δx = Δp = √(2n+1) and
+    A/(h/2) = 2n+1
+
 For all states in the manuscript the off-diagonal moment ⟨xp + px⟩/2 vanishes
 by parity or by the symmetric phase-space placement of cat lobes, so this
 module returns only the diagonal entries (Δx, Δp).
