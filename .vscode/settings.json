@@ -1,5 +1,4 @@
 {
-  "python.defaultInterpreterPath": "python/.venv/bin/python",
   "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.view.pdf.viewer": "tab",
   "files.exclude": {
