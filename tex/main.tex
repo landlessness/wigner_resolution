@@ -25,18 +25,18 @@ This is the abstract.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/de_gosson_cells.pdf}
-\caption{\textbf{Extended cell and squeezed cell.} The state's covariance defines the extended cell of action capacity $A = \pi\Delta x\Delta p \ge h/2$. Inscribed within it is a one-parameter family of squeezed cells of fixed action capacity $a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2$, each labeled by orientation $\theta$. The semi-axes obey the polar-dual identity $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$.}
+\caption{\textbf{Extended cell and squeezed cell.} The state's covariance defines the extended cell of action capacity $A = \pi\Delta x\Delta p \ge h/2$. Inscribed within it is a one-parameter family of squeezed cells of fixed action capacity $a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2$ labeled by orientation $\theta$. The semi-axes obey the polar-dual identity $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$.}
 \label{fig:de_gosson_cells}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/zurek_cells.pdf}
-\caption{\textbf{Squeezed cells at principal axes.} At $\theta = 0$, $\delta_\parallel = \Delta x$, $\delta_\perp = \delta p$; at $\theta = \pi/2$, $\delta_\parallel = \Delta p$, $\delta_\perp = \delta x$. The minor axes reduce to the sub-Planck scales of Zurek, $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$, and the action of each cell remains $h/2$.}
+\caption{\textbf{Squeezed cells at principal axes.} The squeezed cell aligns with the $x$ axis at $\theta = 0$ and with the $p$ axis at $\theta = \pi/2$. At each principal axis the de Gosson action identity $a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2$ and the Zurek scale identity $\delta_\perp(\theta) = \hbar / \delta_\parallel(\theta)$ are the same equation. At $\theta = 0$ the action identity reads $\pi\,\Delta x\,\delta p = h/2$ and the scale identity reads $\delta p = \hbar / \Delta x$. At $\theta = \pi/2$ the action identity reads $\pi\,\Delta p\,\delta x = h/2$ and the scale identity reads $\delta x = \hbar / \Delta p$.}
 \label{fig:zurek_cells}
 \end{figure}
 
-We work in one degree of freedom and align coordinates with the principal axes of the state's covariance ellipse. The Robertson--Schr\"odinger covariance term~\cite{robertson1929,schrodinger1930} vanishes, leaving the position spread $\Delta x = \sqrt{2}\sigma_x$ and the momentum spread $\Delta p = \sqrt{2}\sigma_p$. The symplectic results we use~\cite{degosson2013qblobs,degossoncharlyne2022} extend without modification to higher dimensions and to the full off-diagonal covariance.
+We work in one degree of freedom and align coordinates with the principal axes of the state's covariance ellipse. The Robertson--Schr\"odinger covariance term~\cite{robertson1929,schrodinger1930} vanishes. The position spread is $\Delta x = \sqrt{2}\sigma_x$ and the momentum spread is $\Delta p = \sqrt{2}\sigma_p$. The symplectic results we use~\cite{degosson2013qblobs,degossoncharlyne2022} extend without modification to higher dimensions and to the full off-diagonal covariance.
 
 The state's covariance defines two phase-space cells (Fig.~\ref{fig:de_gosson_cells}). The extended cell, of action capacity
 \begin{equation}
@@ -62,11 +62,12 @@ The cell's action is fixed at $h/2$ by Gromov's non-squeezing theorem~\cite{grom
 \delta_\perp(\theta) = \hbar / \delta_\parallel(\theta),
 \label{eq:delta_perp}
 \end{equation}
-where $\theta$ is the rotated quadrature direction of continuous-variable tomography~\cite{vogelrisken1989,lvovsky2009}. The minor axis is considered squeezed and the major axis anti-squeezed~\cite{teichsaleh1989}. At the principal-axis orientations $\theta = 0$ and $\theta = \pi/2$ (Fig.~\ref{fig:zurek_cells}), the minor axes reduce to the interference scales identified by Zurek~\cite{zurek2001},
+where $\theta$ is the rotated quadrature direction of continuous-variable tomography~\cite{vogelrisken1989,lvovsky2009}. The minor axis is considered squeezed and the major axis anti-squeezed~\cite{teichsaleh1989}. At the principal-axis orientations $\theta = 0$ and $\theta = \pi/2$ (Fig.~\ref{fig:zurek_cells}), the minor axes reduce to the Zurek interference scales~\cite{zurek2001},
 \begin{equation}
-\delta x = \frac{\hbar}{\Delta p}, \qquad \delta p = \frac{\hbar}{\Delta x}.
+\delta x = \frac{\hbar}{\Delta p}, \qquad \delta p = \frac{\hbar}{\Delta x},
 \label{eq:zurek}
 \end{equation}
+which are the de Gosson action identity $a_\theta = h/2$ rewritten as a scale. The action identity $\pi\,\Delta p\,\delta x = h/2$ is identical to $\delta x = \hbar / \Delta p$, and $\pi\,\Delta x\,\delta p = h/2$ is identical to $\delta p = \hbar / \Delta x$.
 
 % ===============================================================================
 %  THE BOUNDARY AND THE KERNEL
@@ -99,12 +100,12 @@ Averaging $P_\theta$ over the inscribed family removes the orientation parameter
 \widetilde{W}(x,p) = \frac{1}{\pi}\int_0^\pi P_\theta(x,p)\,d\theta = (W * \bar{K})(x,p),
 \label{eq:tildeW}
 \end{equation}
-with rotation-averaged kernel $\bar{K}(x,p) = (1/\pi)\int_0^\pi K_\theta(x,p)\,d\theta$. Non-negativity is pointwise: $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. No marginal is taken; $\widetilde{W}$ is a 2D density on the same domain as $W$. The inner envelope of $\widetilde{W}$ is the Zurek cell with semi-axes $\delta x, \delta p$ and action
+with rotation-averaged kernel $\bar{K}(x,p) = (1/\pi)\int_0^\pi K_\theta(x,p)\,d\theta$. Non-negativity is pointwise. $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. No marginal is taken. The density $\widetilde{W}$ lives on the same 2D domain as $W$. The inner envelope of $\widetilde{W}$ is the Zurek cell with semi-axes $\delta x$ and $\delta p$ and action
 \begin{equation}
 a_Z = \pi\,\delta x\,\delta p = \frac{\pi\hbar^2}{\Delta x\,\Delta p},
 \label{eq:aZ}
 \end{equation}
-the polar dual of the extended cell:
+the polar dual of the extended cell,
 \begin{equation}
 A \cdot a_Z = a_\theta^{\,2} = (h/2)^2.
 \label{eq:polarDualActions}
@@ -114,7 +115,7 @@ The three actions form a geometric progression around the quantum of action with
 A : a_\theta : a_Z = \nu : 1 : 1/\nu \quad \text{in units of } h/2.
 \label{eq:actionLadder}
 \end{equation}
-The Zurek-cell scale is an ensemble resolution: it is reached by querying copies of the state at every $\theta$, as in continuous-variable tomography. The single-copy floor is the extended-cell action $A$.
+The Zurek-cell scale is an ensemble resolution. It is reached by querying copies of the state at every $\theta$, as in continuous-variable tomography. The single-copy floor is the extended-cell action $A$.
 
 % ===============================================================================
 %  DEMONSTRATION
@@ -123,18 +124,18 @@ The Zurek-cell scale is an ensemble resolution: it is reached by querying copies
 \begin{figure*}[!tp]
 \centering
 \includegraphics[width=\textwidth]{figures/eigen.pdf}
-\caption{\textbf{Action-capacity construction across four eigenstates.} Rows: squeezed vacuum at $r=0.5$, harmonic Fock state ($n=1$), Morse ($n=8$), and double-well ($n=5$). Columns: (1) Wigner portrait $W(x,p)$ with the extended cell and the $\theta = \pi/2$ squeezed cell overlaid; (2) Wigner cross-section $W(x,0)$, with negative dips between positive peaks; (3) action-capacity kernel $K_{\pi/2}(x,p)$ with the same cells overlaid; (4) convolved cross-section $P_{\pi/2}(x,0)$, non-negative; (5) action-capacity portrait $\widetilde{W}(x,p)$ with the extended cell and the inscribed Zurek cell overlaid.}
+\caption{\textbf{Action-capacity construction across four eigenstates.} Each row shows one state. The four states are the squeezed vacuum at $r = 0.5$, the harmonic Fock state at $n = 1$, the Morse eigenstate at $n = 8$, and the double-well eigenstate at $n = 5$. Column 1 shows the Wigner portrait $W(x, p)$ with the extended cell and the $\theta = \pi/2$ squeezed cell overlaid. Column 2 shows the Wigner cross-section $W(x, 0)$ with its negative dips between positive peaks. Column 3 shows the action-capacity kernel $K_{\pi/2}(x, p)$ with the same two cells overlaid. Column 4 shows the convolved cross-section $P_{\pi/2}(x, 0)$ which is non-negative. Column 5 shows the action-capacity portrait $\widetilde{W}(x, p)$ with the extended cell and the inscribed Zurek cell overlaid.}
 \label{fig:eigen}
 \end{figure*}
 
 \begin{figure*}[!tp]
 \centering
 \includegraphics[width=\textwidth]{figures/cat.pdf}
-\caption{\textbf{Action-capacity construction across four cat states.} Rows: 2-cat, 3-cat, 4-cat, and Zurek compass. Columns as in Fig.~\ref{fig:eigen}. The 4-cat-square and Zurek-compass rows differ by a $\pi/4$ rotation in phase space; cols 1 and 3 distinguish them through the cell-overlay orientation, col 5 does not, because $\widetilde{W}$ averages over the inscribed-family parameter $\theta$.}
+\caption{\textbf{Action-capacity construction across four cat states.} Each row shows one state. The four states are the 2-cat, the 3-cat, the 4-cat, and the Zurek compass. The columns are as in Fig.~\ref{fig:eigen}. The 4-cat and Zurek-compass rows differ by a $\pi/4$ rotation in phase space. Columns 1 and 3 distinguish them through the cell-overlay orientation. Column 5 does not distinguish them because $\widetilde{W}$ averages over the inscribed-family parameter $\theta$.}
 \label{fig:cat}
 \end{figure*}
 
-Figures~\ref{fig:eigen} and~\ref{fig:cat} show the construction across eight states. With the kernel set from each state's covariance, the same number of positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$, without negativity; rotation-averaging across the inscribed family delivers $\widetilde{W}$, the non-negative 2D portrait whose inner resolution envelope is the Zurek cell.
+Figures~\ref{fig:eigen} and~\ref{fig:cat} show the construction across eight states. With the kernel set from each state's covariance, the same number of positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$, without negativity. Rotation-averaging across the inscribed family delivers $\widetilde{W}$, the non-negative 2D portrait whose inner resolution envelope is the Zurek cell.
 
 \bibliography{main}
 
