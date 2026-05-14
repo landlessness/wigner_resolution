@@ -311,7 +311,7 @@ def assemble_grid_5col(
         # Cols 1 and 3: extended + squeezed cells (no Zurek).
         wigner_heatmap(
             ax_h, state,
-            show_extended=show_extended, show_squeezed=show_squeezed,
+            show_extended=False, show_squeezed=False,
             show_zurek=False,
         )
         ax_h.set_aspect("equal", adjustable="box")
