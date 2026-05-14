@@ -25,14 +25,14 @@ This is the abstract.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/de_gosson_cells.pdf}
-\caption{\textbf{Extended cell and squeezed cell.} The state's covariance defines the extended cell of action capacity $A = \pi\Delta x\Delta p \ge h/2$. Inscribed within it is a one-parameter family of squeezed cells of fixed action capacity $a = \pi \delta_\parallel \delta_\perp = h/2$, each parameterized by orientation $\theta$. The semi-axes of any squeezed cell satisfy the polar-dual identity $\delta_\parallel\delta_\perp = \hbar$.}
+\caption{\textbf{Extended cell and squeezed cell.} The state's covariance defines the extended cell of action capacity $A = \pi\Delta x\Delta p \ge h/2$. Inscribed within it is a one-parameter family of squeezed cells of fixed action capacity $a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2$, each labeled by orientation $\theta$. The semi-axes obey the polar-dual identity $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$.}
 \label{fig:de_gosson_cells}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/zurek_cells.pdf}
-\caption{\textbf{Squeezed cells at principle axes.} At the principal-axis orientations, $\theta = 0$, $\delta_\parallel = \Delta x$, $\delta_\perp = \delta p$ and $\theta = \pi/2$, $\delta_\parallel = \Delta p$, $\delta_\perp = \delta x$, the squeezed cell action areas are $a_{\delta x} = \pi \delta x \Delta p = h/2$, $a_{\delta p} = \pi \Delta x \delta p = h/2$, which are identical to the minor axes $\delta x = \hbar / \Delta p$, $\delta p = \hbar / \Delta x$ having the interference scales identified by Zurek.}
+\caption{\textbf{Squeezed cells at principal axes.} At $\theta = 0$, $\delta_\parallel = \Delta x$, $\delta_\perp = \delta p$; at $\theta = \pi/2$, $\delta_\parallel = \Delta p$, $\delta_\perp = \delta x$. The minor axes reduce to the sub-Planck scales of Zurek, $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$, and the action of each cell remains $h/2$.}
 \label{fig:zurek_cells}
 \end{figure}
 
@@ -45,15 +45,15 @@ A = \pi\,\Delta x\,\Delta p \ge h/2,
 \end{equation}
 is the state's outer extent. Inscribed within it is a one-parameter family of squeezed cells of fixed action capacity
 \begin{equation}
-a = \pi\,\delta_\parallel\,\delta_\perp = h/2
+a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2
 \label{eq:squeezed_cell}
 \end{equation}
 identified by de Gosson~\cite{degosson2013qblobs,degossoncharlyne2022}. The semi-axes obey the polar-dual identity
 \begin{equation}
-\delta_\parallel\,\delta_\perp = \hbar.
+\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar.
 \label{eq:polar_dual}
 \end{equation}
-The area of the cell is fixed at $h/2$ by Gromov's non-squeezing theorem~\cite{gromov1985}. As the orientation $\theta$ varies,
+The cell's action is fixed at $h/2$ by Gromov's non-squeezing theorem~\cite{gromov1985}. As the orientation $\theta$ varies,
 \begin{equation}
 \delta_\parallel(\theta) = \sqrt{\Delta x^2\cos^2\theta + \Delta p^2\sin^2\theta},
 \label{eq:delta_parallel}
@@ -62,12 +62,12 @@ The area of the cell is fixed at $h/2$ by Gromov's non-squeezing theorem~\cite{g
 \delta_\perp(\theta) = \hbar / \delta_\parallel(\theta),
 \label{eq:delta_perp}
 \end{equation}
-where $\theta$ is the rotated quadrature direction of continuous-variable tomography~\cite{vogelrisken1989,lvovsky2009}. The minor axis is considered squeezed and the major axis anti-squeezed~\cite{teichsaleh1989}. At the principal-axis orientations $\theta = 0$, $\delta_\parallel = \Delta x$, $\delta_\perp = \delta p$ and $\theta = \pi/2$, $\delta_\parallel = \Delta p$, $\delta_\perp = \delta x$ (Fig.~\ref{fig:zurek_cells}), the minor axes reduce to the interference scales identified by Zurek~\cite{zurek2001},
+where $\theta$ is the rotated quadrature direction of continuous-variable tomography~\cite{vogelrisken1989,lvovsky2009}. The minor axis is considered squeezed and the major axis anti-squeezed~\cite{teichsaleh1989}. At the principal-axis orientations $\theta = 0$ and $\theta = \pi/2$ (Fig.~\ref{fig:zurek_cells}), the minor axes reduce to the interference scales identified by Zurek~\cite{zurek2001},
 \begin{equation}
-\delta x = \frac{\hbar}{\Delta p}, \qquad \delta p = \frac{\hbar}{\Delta x},
+\delta x = \frac{\hbar}{\Delta p}, \qquad \delta p = \frac{\hbar}{\Delta x}.
 \label{eq:zurek}
 \end{equation}
-identical to $a_{\delta x} = \pi \delta x \Delta p = h/2$ and $a_{\delta p} = \pi \Delta x \delta p = h/2$.
+
 % ===============================================================================
 %  THE BOUNDARY AND THE KERNEL
 % ===============================================================================
@@ -80,10 +80,10 @@ W(x,p) = \frac{1}{\pi\hbar}\int \psi^*(x+s)\,\psi(x-s)\,e^{2ips/\hbar}\,ds.
 
 The kernel
 \begin{equation}
-K_\theta(x,p) = \frac{1}{\pi\hbar}\exp\!\left(-\frac{x_\theta^2}{\delta_\parallel^2} - \frac{p_\theta^2}{\delta_\perp^2}\right),
+K_\theta(x,p) = \frac{1}{\pi\hbar}\exp\!\left(-\frac{x_\theta^2}{\delta_\parallel(\theta)^2} - \frac{p_\theta^2}{\delta_\perp(\theta)^2}\right),
 \label{eq:Gtheta}
 \end{equation}
-with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos\theta$ has action capacity $h/2$. The state seen at this resolution is
+with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos\theta$, has action $a_\theta = h/2$. The state seen at this resolution is
 \begin{equation}
 P_\theta(x,p) = (W * K_\theta)(x,p).
 \label{eq:Ptheta}
@@ -99,7 +99,22 @@ Averaging $P_\theta$ over the inscribed family removes the orientation parameter
 \widetilde{W}(x,p) = \frac{1}{\pi}\int_0^\pi P_\theta(x,p)\,d\theta = (W * \bar{K})(x,p),
 \label{eq:tildeW}
 \end{equation}
-with rotation-averaged kernel $\bar{K}(x,p) = (1/\pi)\int_0^\pi K_\theta(x,p)\,d\theta$. Non-negativity is pointwise: $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. No marginal is taken and no axis is integrated out; $\widetilde{W}$ is a 2D phase-space density on the same domain as $W$. The inner envelope of $\widetilde{W}$ is the Zurek cell with semi-axes $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$, the polar dual of the extended cell.
+with rotation-averaged kernel $\bar{K}(x,p) = (1/\pi)\int_0^\pi K_\theta(x,p)\,d\theta$. Non-negativity is pointwise: $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. No marginal is taken; $\widetilde{W}$ is a 2D density on the same domain as $W$. The inner envelope of $\widetilde{W}$ is the Zurek cell with semi-axes $\delta x, \delta p$ and action
+\begin{equation}
+a_Z = \pi\,\delta x\,\delta p = \frac{\pi\hbar^2}{\Delta x\,\Delta p},
+\label{eq:aZ}
+\end{equation}
+the polar dual of the extended cell:
+\begin{equation}
+A \cdot a_Z = a_\theta^{\,2} = (h/2)^2.
+\label{eq:polarDualActions}
+\end{equation}
+The three actions form a geometric progression around the quantum of action with common ratio $\nu = \Delta x\,\Delta p / \hbar$,
+\begin{equation}
+A : a_\theta : a_Z = \nu : 1 : 1/\nu \quad \text{in units of } h/2.
+\label{eq:actionLadder}
+\end{equation}
+The Zurek-cell scale is an ensemble resolution: it is reached by querying copies of the state at every $\theta$, as in continuous-variable tomography. The single-copy floor is the extended-cell action $A$.
 
 % ===============================================================================
 %  DEMONSTRATION
