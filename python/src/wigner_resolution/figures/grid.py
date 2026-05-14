@@ -229,7 +229,7 @@ _DEFAULT_5COL_TITLES = (
     "Wigner Cross-Section",
     r"Action-Capacity Kernel ($\theta = \pi/2$)",
     "Convolved Cross-Section",
-    "Action-Capacity Portrait",
+    r"Action-Capacity Portrait ($\textstyle\int_0^\pi \! d\theta$)",
 )
 
 
