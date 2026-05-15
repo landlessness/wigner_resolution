@@ -93,27 +93,29 @@ The value of $P_\theta$ at any point in phase space is the probability that the 
 %  THE CONVOLVED PORTRAIT
 % ===============================================================================
 
-Integrating $P_\theta$ over the inscribed family removes the orientation parameter and returns a single non-negative density,
+$\widetilde W$ is the action-capacity portrait of the state, given by the integral of $P_\theta$ inside $A$,
 \begin{equation}
 \widetilde{W}(x,p) = \frac{1}{\pi}\int_0^\pi P_\theta(x,p)\,d\theta = (W * \bar{K})(x,p),
 \label{eq:tildeW}
 \end{equation}
-with integrated kernel $\bar{K}(x,p) = (1/\pi)\int_0^\pi K_\theta(x,p)\,d\theta$. Non-negativity is pointwise. $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. $\widetilde{W}$ varies on scales no smaller than the Zurek cell, the polar dual of the extended cell. The Zurek cell carries action
+with integrated kernel $\bar{K}(x,p) = (1/\pi)\int_0^\pi K_\theta(x,p)\,d\theta$. Non-negativity is pointwise. $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function.
+
+$\widetilde W$ varies on scales with semi-axes $\delta x$ and $\delta p$. This inner cell $a$ shares the aspect ratio of the extended cell $A$, with semi-axes reciprocal in $\hbar$. Its action is
 \begin{equation}
-a_Z = \pi\,\delta x\,\delta p = \frac{\pi\hbar^2}{\Delta x\,\Delta p}.
-\label{eq:aZ}
+a = \pi\,\delta x\,\delta p = \pi\hbar^2/(\Delta x\,\Delta p).
+\label{eq:a_inner}
 \end{equation}
-The outer and inner cells are reciprocal in $\hbar$,
+The outer and inner cell actions are reciprocal across the squeezed-cell floor,
 \begin{equation}
-A \cdot a_Z = a_\theta^{\,2} = (h/2)^2.
-\label{eq:polarDualActions}
+A \cdot a = a_\theta^{\,2} = (h/2)^2.
+\label{eq:reciprocalActions}
 \end{equation}
-The state's action capacity $\nu = \Delta x\,\Delta p / \hbar$ controls the geometry of all three cells. $A$ exceeds the quantum of action by a factor $\nu$, and $a_Z$ falls below it by the same factor,
+Letting $N = 2A/h$ count the squeezed cells the extended cell holds,
 \begin{equation}
-A : a_\theta : a_Z = \nu : 1 : 1/\nu \quad \text{in units of } h/2.
+A : a_\theta : a = N : 1 : N^{-1} \quad \text{in units of } h/2.
 \label{eq:actionLadder}
 \end{equation}
-$a_Z$ is smaller than the action of any single inscribed cell. The state's single-orientation resolution remains $a_\theta = h/2$.
+No single $K_\theta$ attains the resolution $a$. Only the integral over the squeezed-cell family does. The scale Zurek identified is $a_Z = a/\pi = \hbar^2/(\Delta x\,\Delta p)$.
 
 % ===============================================================================
 %  DEMONSTRATION
