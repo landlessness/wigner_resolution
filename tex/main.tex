@@ -66,9 +66,9 @@ A = \pi\,\Delta x\,\Delta p \ge h/2.
 \label{eq:extended_cell}
 \end{equation}
 
-De Gosson proved that the Heisenberg cell contains a quantum blob if and only if the state is physically realizable~\cite{degosson2005bullsci,degosson2013qblobs,degossoncharlyne2022}. A quantum blob is a symplectic image of the phase-space ball of radius $\sqrt{\hbar}$, of capacity $\pi\hbar = h/2$, the minimum allowed by Gromov's non-squeezing theorem~\cite{gromov1985,degosson2009camel}. For a Heisenberg cell larger than $h/2$ the contained blobs form a family, the orbit of the unit blob under the symplectic group.
+De Gosson proved that the Heisenberg cell contains a quantum blob if and only if the state is physically realizable~\cite{degosson2005bullsci,degosson2013qblobs,degossoncharlyne2022}. A quantum blob is a symplectic image of the phase-space ball of radius $\sqrt{\hbar}$, of capacity $\pi\hbar = h/2$, the minimum allowed by the symplectic-camel principle~\cite{degosson2009camel}. For a Heisenberg cell larger than $h/2$ the contained blobs form a family, the orbit of the unit blob under the symplectic group.
 
-Among the contained blobs we identify a one-parameter subfamily, the squeezed cells $a_\theta$ tangent to the Heisenberg cell along direction $\theta$ (Fig.~\ref{fig:de_gosson_cells}). The semi-axis along $\theta$ is
+Zurek identified an interference scale set by the state's spread orthogonal to a given direction in phase space~\cite{zurek2001,toscano2006}. That scale is the minor axis of exactly one blob in de Gosson's orbit, the squeezed cell $a_\theta$ tangent to the Heisenberg cell along each direction $\theta$ (Fig.~\ref{fig:de_gosson_cells}). The semi-axis along $\theta$ is
 \begin{equation}
 \delta_\parallel(\theta) = \sqrt{\Delta x^2\cos^2\theta + \Delta p^2\sin^2\theta}.
 \label{eq:delta_parallel}
@@ -79,12 +79,12 @@ The squeezed cell cannot stretch to reach the Heisenberg cell's boundary without
 \label{eq:delta_perp}
 \end{equation}
 
-This is the symplectic-camel principle of de Gosson~\cite{degosson2009camel,gromov1985}. The camel passes through the eye of the needle only by changing its shape, and the shape change is exactly reciprocal because the capacity is locked at $h/2$. The squeezed cell has fixed action
+This is the symplectic-camel principle of de Gosson~\cite{degosson2009camel}. The camel passes through the eye of the needle only by changing its shape, and the shape change is exactly reciprocal because the capacity is locked at $h/2$. The relation $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$ is symplectic polar duality~\cite{degossoncharlyne2022}. The squeezed cell has fixed action
 \begin{equation}
 a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2.
 \label{eq:squeezed_cell}
 \end{equation}
-The shorter of the two semi-axes is the squeezed axis of $a_\theta$, $\min(\delta_\parallel(\theta), \delta_\perp(\theta))$, and the longer is the anti-squeezed axis, $\max(\delta_\parallel(\theta), \delta_\perp(\theta))$. The semi-axis $\delta_\parallel(\theta)$ is the spread of the state's rotated quadrature $x_\theta = x\cos\theta + p\sin\theta$, the marginal measured by homodyne detection at phase $\theta$~\cite{vogelrisken1989,lvovsky2009}. The perpendicular semi-axis $\delta_\perp(\theta) = \hbar/\delta_\parallel(\theta)$ is the uncertainty-saturated spread of the conjugate quadrature. The family $\{a_\theta\}_{\theta \in [0,\pi)}$ is the one-parameter orbit of squeezed cells inscribed in the Heisenberg cell, parameterized by the quadrature angle of optical tomography.
+The shorter of the two semi-axes is the squeezed axis of $a_\theta$, $\min(\delta_\parallel(\theta), \delta_\perp(\theta))$, and the longer is the anti-squeezed axis, $\max(\delta_\parallel(\theta), \delta_\perp(\theta))$. The parallel semi-axis $\delta_\parallel(\theta)$ matches the spread of the state's rotated quadrature $x_\theta = x\cos\theta + p\sin\theta$, the marginal measured by homodyne detection at phase $\theta$~\cite{vogelrisken1989,lvovsky2009}. The perpendicular semi-axis $\delta_\perp(\theta)$ is the anti-squeezed axis of the matched quantum blob. The family $\{a_\theta\}_{\theta \in [0,\pi)}$ is the one-parameter orbit of squeezed cells inscribed in the Heisenberg cell, parameterized by the quadrature angle of optical tomography.
 
 Along the principal axes (Fig.~\ref{fig:zurek_cells}), where $\theta = 0$ and $\theta = \pi/2$, the squeezed cells are
 \begin{equation}
@@ -112,7 +112,7 @@ with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos
 P_\theta(x,p) = (W * K_\theta)(x,p).
 \label{eq:Ptheta}
 \end{equation}
-$P_\theta$ is non-negative everywhere. Convolving a Wigner function with a Gaussian of capacity $\ge h/2$ yields a non-negative function~\cite{cartwright1976}. The kernel $K_\theta$ is the unique blob in the squeezed family at orientation $\theta$, and its action is $h/2$.
+$P_\theta$ is non-negative everywhere. Convolving a Wigner function with a Gaussian of capacity $\ge h/2$ yields a non-negative function~\cite{cartwright1976,cordero2018}. The kernel $K_\theta$ is the unique blob in the squeezed family at orientation $\theta$, and its action is $h/2$.
 
 % ===============================================================================
 %  THE CONVOLVED PORTRAIT
@@ -125,14 +125,14 @@ The phase-space portrait of the state at the resolution of its own action capaci
 \end{equation}
 Non-negativity is pointwise. $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function.
 
-$\widetilde W$ varies on scales no smaller than the cell with semi-axes $\delta x$ and $\delta p$. This is the quorum cell~\cite{darianomacconeparis2001} $a$, of action
+$\widetilde W$ varies on scales no smaller than the cell with semi-axes $\delta x$ and $\delta p$. We call it the quorum cell, after the quorum of observables in optical tomography~\cite{darianomacconeparis2001}, of action
 \begin{equation}
 a = \pi\,\delta x\,\delta p = \pi\hbar^2/(\Delta x\,\Delta p).
 \label{eq:a_inner}
 \end{equation}
-The scale Zurek identified is $a_Z = a/\pi = \hbar^2/(\Delta x\,\Delta p)$. The quorum cell is the common interior of the squeezed family, the region accessible to every member. Every member of the family has action $h/2$, the uncertainty floor. The common interior is finer than any single member, an ellipse with action $a \le h/2$.
+The scale Zurek identified is $a_Z = a/\pi = \hbar^2/(\Delta x\,\Delta p)$, the same scale recovered here from the symplectic geometry of the state. The quorum cell is the common interior of the squeezed family, sharper than any member, but every member has action $h/2$, the uncertainty floor.
 
-The phase-space cells, the squeezed family, and the convolved portrait extend without modification to higher dimensions and to states with $x$-$p$ correlations, where the Heisenberg cell is the full Robertson--Schr\"odinger covariance ellipsoid~\cite{robertson1929,schrodinger1930,degosson2013qblobs,degossoncharlyne2022}.
+The construction extends to higher dimensions through the symplectic capacity of the full Robertson--Schr\"odinger covariance ellipsoid~\cite{robertson1929,schrodinger1930,degosson2013qblobs,degossoncharlyne2022}.
 
 % ===============================================================================
 %  DEMONSTRATION
