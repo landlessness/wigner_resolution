@@ -13,7 +13,7 @@
 \date{\today}
 
 \begin{abstract}
-The Wigner function of a quantum state takes negative values, useful in some contexts and not in others. We convolve the Wigner function with the Gaussian of the de Gosson quantum blob $a_\theta = h/2$ inscribed in the state's extended cell of action capacity $A = \pi\Delta x\Delta p \ge h/2$ and integrate over $\theta$. The result is a non-negative phase-space portrait that preserves all structure down to the quorum cell $a = \pi \delta x \delta p \le h/2$, an ellipse with semi-axes equal to the sub-Planck scales of Zurek.
+The Wigner function of a quantum state takes negative values, useful in some contexts and not in others. We convolve the Wigner function with the Gaussian of the de Gosson quantum blob $a_\theta = h/2$ inscribed and squeezed in the state's extended cell of action capacity $A = \pi\Delta x\Delta p \ge h/2$ and integrate over $\theta$. The result is a non-negative phase-space portrait that preserves all structure down to the quorum cell $a = \pi \delta x \delta p \le h/2$, an ellipse with semi-axes equal to the sub-Planck scales of Zurek.
 \end{abstract}
 
 \maketitle
@@ -107,7 +107,7 @@ The Wigner function of the squeezed cell at orientation $\theta$ is the Gaussian
 K_\theta(x,p) = \frac{1}{\pi\hbar}\exp\!\left(-\frac{x_\theta^2}{\delta_\parallel(\theta)^2} - \frac{p_\theta^2}{\delta_\perp(\theta)^2}\right),
 \label{eq:Gtheta}
 \end{equation}
-with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos\theta$. The convolution of the Wigner function with the squeezed cell at orientation $\theta$ is
+with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos\theta$. The convolution of the Wigner function of the state with $K_\theta$ is
 \begin{equation}
 P_\theta(x,p) = (W * K_\theta)(x,p).
 \label{eq:Ptheta}
@@ -130,7 +130,7 @@ $\widetilde W$ varies on scales no smaller than the cell with semi-axes $\delta 
 a = \pi\,\delta x\,\delta p = \pi\hbar^2/(\Delta x\,\Delta p).
 \label{eq:a_inner}
 \end{equation}
-The scale Zurek identified is $a_Z = a/\pi = \hbar^2/(\Delta x\,\Delta p)$. The quorum cell is the geometric common interior of the squeezed family, the region accessible to every member. Its sub-Planck area is not a single cell below $h/2$ but the quorum of $a_\theta = h/2$ cells across orientations.
+The scale Zurek identified is $a_Z = a/\pi = \hbar^2/(\Delta x\,\Delta p)$. The quorum cell is the geometric common interior of the squeezed family, the region accessible to every member. Its area is below $h/2$ but resolves the quorum of $a_\theta = \pi\hbar$ cells across orientations.
 
 The phase-space cells, the squeezed family, and the convolved portrait extend without modification to higher dimensions and to states with $x$-$p$ correlations, where the extended cell is the full Robertson--Schr\"odinger covariance ellipsoid~\cite{robertson1929,schrodinger1930,degosson2013qblobs,degossoncharlyne2022}.
 
@@ -140,7 +140,7 @@ The phase-space cells, the squeezed family, and the convolved portrait extend wi
 
 Figures~\ref{fig:eigen} and~\ref{fig:cat} show the portrait across eight states. With the kernel built from each state's action capacity, the positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$ with the same count and location, without negativity. The integral across the squeezed family gives $\widetilde W$, the non-negative phase-space portrait at the state's action-capacity resolution.
 
-Other paths to a non-negative Wigner function — covariance-matched generalized Husimi smoothing~\cite{husimi1940,cartwright1976}, the truncated Wigner approximation~\cite{polkovnikov2010}, the Cahill--Glauber $s$-ordered family~\cite{cahillglauber1969}, maximum-likelihood reconstruction with Fock-state truncation~\cite{lvovsky2009} — succeed in their regimes of validity and fail outside them. In their regimes of success they smooth at the action capacity. The supplement shows the four cases. The action capacity is the Wigner function's resolution floor, and the de Gosson squeezed cell is its physical signature.
+Other paths to a non-negative Wigner function --- covariance-matched generalized Husimi smoothing~\cite{husimi1940,cartwright1976}, the truncated Wigner approximation~\cite{polkovnikov2010}, the Cahill--Glauber $s$-ordered family~\cite{cahillglauber1969}, maximum-likelihood reconstruction with Fock-state truncation~\cite{lvovsky2009} --- succeed in their regimes of validity and fail outside them. In their regimes of success they smooth at the action capacity. The supplement shows the four cases. The action capacity is the Wigner function's resolution floor, and the de Gosson squeezed cell is its physical signature.
 
 \bibliography{main}
 
