@@ -25,7 +25,7 @@ The Wigner function of a quantum state takes negative values, useful in some con
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/de_gosson_cells.pdf}
-\caption{\textbf{The extended cell and the squeezed family.} The extended cell is the state's covariance ellipsoid, of action $A = \pi\Delta x\Delta p \ge h/2$. The squeezed cells $a_\theta$ are the inscribed quantum blobs tangent to the extended cell, each of action $h/2$ and semi-axes reciprocal in $\hbar$, $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$. The family is parameterized by orientation $\theta$; the action is the same for every member.}
+\caption{\textbf{The extended cell and the squeezed cells.} The extended cell is the state's covariance ellipsoid, of action $A = \pi\Delta x\Delta p \ge h/2$. The squeezed cells $a_\theta$ are the inscribed quantum blobs tangent to the extended cell, each of action $h/2$ and semi-axes reciprocal in $\hbar$, $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$. The family is parameterized by orientation $\theta$; the action is the same for every member.}
 \label{fig:de_gosson_cells}
 \end{figure}
 
@@ -40,14 +40,14 @@ The Wigner function of a quantum state takes negative values, useful in some con
 \begin{figure*}[!tp]
 \centering
 \includegraphics[width=\textwidth]{figures/eigen.pdf}
-\caption{\textbf{Wigner negativity and its resolution at the action capacity, for four eigenstates.} The four states are the squeezed vacuum at $r = 0.5$, the harmonic Fock state at $n = 1$, the Morse eigenstate at $n = 8$, and the double-well eigenstate at $n = 5$. Column 1: the Wigner function $W(x, p)$. Column 2: the cross-section $W(x, 0)$, with its negative dips between positive peaks. Column 3: the squeezed cell $K_{\theta = \pi/2}$ inside the extended cell $A$. Column 4: the cross-section $P_{\pi/2}(x, 0)$, non-negative. Column 5: the portrait $\widetilde W(x, p)$ at the resolution of the quorum cell $a$ inside the extended cell $A$.}
+\caption{\textbf{Wigner negativity and its resolution at the action capacity, for eigenstates.} The four states are the squeezed vacuum at $r = 0.5$, the harmonic Fock state at $n = 1$, the Morse eigenstate at $n = 8$, and the double-well eigenstate at $n = 5$. Column 1: the Wigner function $W(x, p)$. Column 2: the cross-section $W(x, 0)$, with its negative dips between positive peaks. Column 3: the squeezed cell $K_{\theta = \pi/2}$ inside the extended cell $A$. Column 4: the cross-section $P_{\pi/2}(x, 0)$, non-negative. Column 5: the portrait $\widetilde W(x, p)$ at the resolution of the quorum cell $a$ inside the extended cell $A$.}
 \label{fig:eigen}
 \end{figure*}
 
 \begin{figure*}[!tp]
 \centering
 \includegraphics[width=\textwidth]{figures/cat.pdf}
-\caption{\textbf{Wigner negativity and its resolution at the action capacity, for four cat states.} The four states are the 2-cat, the 3-cat, the 4-cat, and the Zurek compass. The columns are as in Fig.~\ref{fig:eigen}. The 4-cat and Zurek-compass states differ by a $\pi/4$ rotation in phase space; this rotation appears in columns 1 and 3 but not in column 5, where $\widetilde W$ is rotation-invariant under the family integral.}
+\caption{\textbf{Wigner negativity and its resolution at the action capacity, for cat states.} The four states are the 2-cat, the 3-cat, the 4-cat, and the Zurek compass. The columns are as in Fig.~\ref{fig:eigen}. The 4-cat and Zurek-compass states differ by a $\pi/4$ rotation in phase space; this rotation appears in columns 1 and 3 but not in column 5, where $\widetilde W$ is rotation-invariant under the family integral.}
 \label{fig:cat}
 \end{figure*}
 
@@ -67,14 +67,14 @@ A = \pi\,\Delta x\,\Delta p \ge h/2.
 \label{eq:extended_cell}
 \end{equation}
 
-De Gosson proved that the extended cell contains a quantum blob if and only if the state is physically realizable~\cite{degosson2005bullsci,degosson2013qblobs,degossoncharlyne2022}. A quantum blob is a symplectic image of the phase-space ball of radius $\sqrt{\hbar}$, of capacity $\pi\hbar = h/2$, the minimum allowed by Gromov's non-squeezing theorem~\cite{gromov1985,degosson2009camel}. For an extended cell larger than $h/2$ the contained blobs form a family, the orbit of the unit blob under the symplectic group.
+De Gosson proved that the extended cell $A$ contains a quantum blob if and only if the state is physically realizable~\cite{degosson2005bullsci,degosson2013qblobs,degossoncharlyne2022}. A quantum blob is a symplectic image of the phase-space ball of radius $\sqrt{\hbar}$, of capacity $\pi\hbar = h/2$, the minimum allowed by Gromov's non-squeezing theorem~\cite{gromov1985,degosson2009camel}. For an extended cell larger than $A > h/2$ the contained blobs form a family, the orbit of the unit blob under the symplectic group.
 
 Among the contained blobs, the one whose semi-axis along direction $\theta$ equals the radius of the extended cell along $\theta$ is the squeezed cell $a_\theta$ (Fig.~\ref{fig:de_gosson_cells}). Its semi-axis along $\theta$ is
 \begin{equation}
-\delta_\parallel(\theta) = \sqrt{\Delta x^2\cos^2\theta + \Delta p^2\sin^2\theta},
+\delta_\parallel(\theta) = \sqrt{\Delta x^2\cos^2\theta + \Delta p^2\sin^2\theta}.
 \label{eq:delta_parallel}
 \end{equation}
-the radius of the extended cell along $\theta$. The squeezed cell cannot reach the boundary of the extended cell along $\theta$ without paying for the stretch with a reciprocal squeeze orthogonal to it. The perpendicular semi-axis is forced by the locked capacity $h/2$ to
+The squeezed cell cannot reach the boundary of the extended cell along $\theta$ without paying for the stretch with a reciprocal squeeze orthogonal to it. The perpendicular semi-axis is forced by the locked capacity $h/2$ to
 \begin{equation}
 \delta_\perp(\theta) = \hbar/\delta_\parallel(\theta).
 \label{eq:delta_perp}
@@ -140,7 +140,9 @@ The phase-space cells, the squeezed family, and the convolved portrait extend wi
 
 Figures~\ref{fig:eigen} and~\ref{fig:cat} show the portrait across eight states. With the kernel built from each state's action capacity, the positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$ with the same count and location, without negativity. The integral across the squeezed family gives $\widetilde W$, the non-negative phase-space portrait at the state's action-capacity resolution.
 
-Other paths to a non-negative Wigner function --- covariance-matched generalized Husimi smoothing~\cite{husimi1940,cartwright1976}, the truncated Wigner approximation~\cite{polkovnikov2010}, the Cahill--Glauber $s$-ordered family~\cite{cahillglauber1969}, maximum-likelihood reconstruction with Fock-state truncation~\cite{lvovsky2009} --- succeed in their regimes of validity and fail outside them. In their regimes of success they smooth at the action capacity. The supplement shows the four cases. The action capacity is the Wigner function's resolution floor, and the de Gosson squeezed cell is its physical signature.
+Other paths to a non-negative Wigner function --- covariance-matched generalized Husimi smoothing~\cite{husimi1940,cartwright1976}, the truncated Wigner approximation~\cite{polkovnikov2010}, the Cahill--Glauber $s$-ordered family~\cite{cahillglauber1969}, maximum-likelihood reconstruction with Fock-state truncation~\cite{lvovsky2009} --- succeed in their regimes of validity and fail outside them. In their regimes of success they also have resolution determined by the action capacity. The supplement shows the four cases. 
+
+The action capacity is the Wigner function's non-negative resolution floor, and the de Gosson squeezed cell is its physical signature.
 
 \bibliography{main}
 
