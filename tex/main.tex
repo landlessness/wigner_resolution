@@ -31,7 +31,7 @@
 \date{\today}
 
 \begin{abstract}
-The Wigner function of a quantum state takes negative values, useful in some contexts, not in others. We convolve the Wigner function with the Gaussian of the de Gosson quantum blob with action $h/2$ inscribed and squeezed in the state's Heisenberg cell of action capacity $\pi\Delta x\Delta p \ge h/2$ over every quadrature of the state. The result is a non-negative portrait that preserves all structure down to the quorum cell $\hbar^2 / (\Delta x \Delta p)$, an ellipse with semi-axes equal to the interference scales of Zurek.
+The Wigner function of a quantum state takes negative values, useful in some contexts, not in others. We convolve the Wigner function with the Gaussian of the de Gosson quantum blob with action $h/2$ inscribed and squeezed in the state's Heisenberg cell of action capacity $\pi\Delta x\Delta p \ge h/2$ over every quadrature of the state. The result is a non-negative portrait that preserves structure down to the quorum cell $\hbar^2 / (\Delta x \Delta p)$, an ellipse with semi-axes equal to the interference scales of Zurek.
 \end{abstract}
 
 \keywords{Phase space formulation of quantum mechanics, Wigner functions, Uncertainty relations, Symplectic geometry, Squeezed states, Quantum state tomography}
@@ -73,8 +73,7 @@ The Wigner function of a quantum state takes negative values, useful in some con
 % ===============================================================================
 %  OPENING
 % ===============================================================================
-
-The Wigner function represents a quantum state in phase space~\cite{wigner1932,hillery1984}. Its negativity is an indicator of non-classicality~\cite{kenfack2004,hudson1974} and a resource for quantum advantage~\cite{veitch2012,marieisert2012}. A non-negative reading admits a literal probability interpretation in phase space, supports classical sampling of quantum dynamics~\cite{polkovnikov2010}, and serves as the boundary between the classical and quantum regimes~\cite{marieisert2012,veitch2012}. This letter develops the non-negative context at the resolution permitted by the state's action capacity.
+The Wigner function represents a quantum state in phase space~\cite{wigner1932,hillery1984}. Its negativity is an indicator of non-classicality~\cite{kenfack2004} and a resource for quantum advantage~\cite{veitch2012}. A non-negative reading admits a literal probability interpretation in phase space~\cite{husimi1940,cartwright1976} and supports classical sampling of quantum dynamics~\cite{polkovnikov2010}. This letter develops the non-negative context at the resolution permitted by the state's action capacity.
 
 % ===============================================================================
 %  THE PHASE-SPACE CELLS
@@ -105,14 +104,14 @@ This is the symplectic-camel principle of de Gosson~\cite{degosson2009camel}. Th
 a_\theta = \pi\,\delta_\parallel(\theta)\,\delta_\perp(\theta) = h/2.
 \label{eq:squeezed_cell}
 \end{equation}
-The shorter of the two semi-axes is the squeezed axis of $a_\theta$, $\min(\delta_\parallel(\theta), \delta_\perp(\theta))$, and the longer is the anti-squeezed axis, $\max(\delta_\parallel(\theta), \delta_\perp(\theta))$. The parallel semi-axis $\delta_\parallel(\theta)$ matches the spread of the state's rotated quadrature $x_\theta = x\cos\theta + p\sin\theta$, the marginal measured by homodyne detection at phase $\theta$~\cite{vogelrisken1989,lvovsky2009}. The perpendicular semi-axis $\delta_\perp(\theta)$ is the anti-squeezed axis of the matched quantum blob. The family $\{a_\theta\}_{\theta \in [0,\pi)}$ is the one-parameter orbit of squeezed cells inscribed in the Heisenberg cell, parameterized by the homodyne quadrature angle.
+The parallel semi-axis $\delta_\parallel(\theta)$ matches the spread of the state's rotated quadrature $x_\theta = x\cos\theta + p\sin\theta$, the marginal measured by homodyne detection at phase $\theta$~\cite{vogelrisken1989,lvovsky2009}. The family $\{a_\theta\}_{\theta \in [0,\pi)}$ is the one-parameter orbit of squeezed cells inscribed in the Heisenberg cell, parameterized by the homodyne quadrature angle.
 
 Along the principal axes (Fig.~\ref{fig:zurek_cells}), where $\theta = 0$ and $\theta = \pi/2$, the squeezed cells are
 \begin{equation}
 a_{\delta x} = \pi\,\Delta p\,\delta x = h/2, \qquad a_{\delta p} = \pi\,\Delta x\,\delta p = h/2,
 \label{eq:principal_axis_cells}
 \end{equation}
-with squeezed axes $\delta x, \delta p$ and anti-squeezed axes $\Delta p, \Delta x$. The reciprocal relationships $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ are the interference scales of Zurek~\cite{zurek2001}. The de Gosson squeezed cells and the Zurek scales are two readings of the same action cells. The Heisenberg-cell semi-axes $(\Delta x, \Delta p)$ and the quorum-cell semi-axes $(\delta x, \delta p)$ are linked by symplectic polar duality~\cite{degossoncharlyne2022}. The scales traditionally labeled sub-Planck are the squeezed axes of exactly Planckian cells of action $\pi\hbar$.
+with squeezed axes $\delta x, \delta p$ along the principal directions. The reciprocal relationships $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ are the interference scales of Zurek~\cite{zurek2001}. The de Gosson squeezed cells and the Zurek scales are two readings of the same action cells. The Heisenberg-cell semi-axes $(\Delta x, \Delta p)$ and the quorum-cell semi-axes $(\delta x, \delta p)$ are linked by symplectic polar duality~\cite{degossoncharlyne2022}. The scales traditionally labeled sub-Planck are the squeezed axes of exactly Planckian cells of action $\pi\hbar$.
 
 % ===============================================================================
 %  THE BOUNDARY AND THE KERNEL
@@ -159,22 +158,25 @@ The construction extends to higher dimensions through the symplectic capacity of
 %  DEMONSTRATION
 % ===============================================================================
 
-Figures~\ref{fig:eigen} and~\ref{fig:cat} show the portrait across eight states. With the kernel built from each state's action capacity, the positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$ with the same count and location, without negativity. The integral across the squeezed family gives $\widetilde W$, the non-negative phase-space portrait that preserves all structure of the state down to the resolution of the quorum cell.
+Figures~\ref{fig:eigen} and~\ref{fig:cat} show the portrait across eight states. With the kernel built from each state's action capacity, the positive peaks of $W$ along the chosen cross-section appear in $P_{\pi/2}$ with the same count and location, without negativity. The integral across the squeezed family gives $\widetilde W$, the non-negative phase-space portrait that preserves the structure of the state down to the resolution of the quorum cell.
 
 % ===============================================================================
 %  DISCUSSION
 % ===============================================================================
 
-Other paths to a non-negative Wigner function include covariance-matched generalized Husimi smoothing~\cite{husimi1940,cartwright1976}, the truncated Wigner approximation~\cite{polkovnikov2010}, the Cahill--Glauber $s$-ordered family~\cite{cahillglauber1969}, and maximum-likelihood reconstruction with Fock-state truncation~\cite{lvovsky2009}. Each succeeds in its regime of validity. Future work will examine whether the Wigner resolution in those regimes also follows from action capacity.
+Other paths to a non-negative Wigner function include covariance-matched generalized Husimi smoothing~\cite{husimi1940,cartwright1976}, the truncated Wigner approximation~\cite{polkovnikov2010}, the Cahill--Glauber $s$-ordered family~\cite{cahillglauber1969}, and maximum-likelihood reconstruction with Fock-state truncation~\cite{lvovsky2009}. Each succeeds in its regime of validity. Whether the Wigner resolution in those regimes also follows from action capacity remains an open question.
 
-The de Gosson squeezed cell $a_\theta = h/2$ is the Wigner function's non-negative resolution floor, inscribed in the state's action capacity $A = \pi\Delta x\Delta p$. The textbook see-saw $\sigma_x \sigma_p \ge \hbar/2$ loosens as $A$ grows, the transition from micro to macro-mechanics that Heisenberg~\cite{heisenberg1927} and Bohr~\cite{bohr1928} identified as requiring special care. The squeezed cell does not, and its squeezing compresses reciprocally with $A$ down to the quorum cell $a = \hbar^2/(\Delta x \Delta p)$, the floor of the non-negative portrait, built from the same quadrature quorum as homodyne tomography.
+The uncertainty principle $\sigma_x \sigma_p \ge \hbar/2$ loosens as the action capacity $A$ grows, the transition from micro to macro-mechanics that Heisenberg~\cite{heisenberg1927} and Bohr~\cite{bohr1928} identified as requiring special care. The de Gosson squeezed cell does not. While $a_\theta = h/2$ across every $A \ge h/2$, its axes tighten reciprocally, $\delta_\parallel \delta_\perp = \hbar$, the squeezed axis $\delta = \hbar/\Delta$ contracting as the conjugate spread $\Delta$ grows. Built from the same quadrature quorum as homodyne tomography, the squeeze reaches the quorum cell $a = \pi \hbar^2/A = \hbar^2/(\Delta x \Delta p)$, the Wigner resolution sharpening as action capacity grows.
 
 % ===============================================================================
 %  DATA AVAILABILITY
 % ===============================================================================
 
 \begin{acknowledgments}
-This research received no external funding. The code that generated the figures of this article is openly available~\cite{zenododeposit}.
+This research received no external funding. Numerical computations
+were performed with QuTiP~\cite{qutip5} and SciPy~\cite{scipy}, and the
+code reproducing the numerical results of this article is openly
+available~\cite{zenododeposit}.
 \end{acknowledgments}
 
 \bibliography{main}
