@@ -31,10 +31,11 @@
 \date{\today}
 
 \begin{abstract}
-The Wigner function of a quantum state takes negative values, useful in some contexts, not in others. We convolve the Wigner function with the Gaussian of a de Gosson quantum blob of action $h/2$, inscribed in the state's Heisenberg cell of action capacity $\pi\Delta x\Delta p \ge h/2$ and tangent to it across every quadrature. The result is a non-negative portrait that preserves structure down to the quorum cell $\hbar^2 / (\Delta x \Delta p)$, an ellipse whose semi-axes are the interference scales of Zurek.
+Phase-space formulations of quantum mechanics usually ignore that resolution in the $(x,p)$ plane is bounded below by the Planck scale. In the Wigner formulation, the justification is that even though the quasi-probability distribution is defined pointwise, its negative values carry physically meaningful information. We identify that the interference scales of Zurek are exactly the axes of de Gosson quantum blobs of constant action $h/2$. Inscribed within the state's Heisenberg cell of action capacity $\pi \Delta x \Delta p \ge h/2$, these blobs form a family deforming continuously such that for every quadrature, a corresponding blob is bitangent to the cell along that axis. Integrating convolutions of the Wigner function across this family yields a non-negative portrait with resolution $\pi \hbar^2/(\Delta x \Delta p)$, sub-Planckian by tradition but produced by integration across the quadrature quorum of $h/2$ blobs.
 \end{abstract}
 
-\keywords{Phase space formulation of quantum mechanics, Wigner functions, Uncertainty relations, Symplectic geometry, Squeezed states, Quantum state tomography}
+\keywords{Phase space formulation of quantum mechanics, Wigner functions, Uncertainty principle, Symplectic geometry, Schrödinger cat states}
+
 
 \maketitle
 
@@ -45,14 +46,14 @@ The Wigner function of a quantum state takes negative values, useful in some con
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/zurek_cells.pdf}
-\caption{\textbf{Heisenberg cell and squeezed cells.} The Heisenberg cell is the state's covariance ellipsoid, of action $A = \pi \Delta x \Delta p \ge h/2$. The two squeezed cells $a_{\delta x} = \pi \delta x \Delta p = h/2$ and $a_{\delta p} = \pi \Delta x \delta p = h/2$ are tangent to the Heisenberg cell at the principal axes. Their squeezed axes $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ are the interference scales of Zurek.}
+\caption{\textbf{Heisenberg cell and squeezed cells.} The Heisenberg cell is the state's covariance ellipsoid, of action $A = \pi \Delta x \Delta p \ge h/2$. At the principal axes, the two squeezed cells $a_{\delta x} = \pi \delta x \Delta p = h/2$ and $a_{\delta p} = \pi \Delta x \delta p = h/2$ are tangent to the Heisenberg cell. Their squeezed axes $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ are the interference scales of Zurek. The quorum cell $a$ is the common interior of the family across every quadrature, an ellipse with semi-axes $\delta x, \delta p$ and action $a = \pi \delta x \delta p \le h/2$.}
 \label{fig:zurek_cells}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/de_gosson_cells.pdf}
-\caption{\textbf{Squeezed family and quorum cell.} The squeezed cells $a_\theta$ are quantum blobs tangent to the Heisenberg cell, each of action $h/2$ with semi-axes reciprocal in $\hbar$, $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$. As $\theta$ varies the squeezed cells rotate and change aspect ratio with the shape of the Heisenberg cell, recovering $a_{\delta p}$ at $\theta = 0$ and $a_{\delta x}$ at $\theta = \pi/2$. The quorum cell $a$ is the common interior of the family across every quadrature, an ellipse with semi-axes $\delta x, \delta p$ and action $a = \pi \delta x \delta p \le h/2$.}
+\caption{\textbf{Squeezed family and quorum cell.} The squeezed cells $a_\theta$ are quantum blobs tangent to the Heisenberg cell, each of action $h/2$ with semi-axes reciprocal in $\hbar$, $\delta_\parallel(\theta)\,\delta_\perp(\theta) = \hbar$. As $\theta$ varies the squeezed cells rotate and change aspect ratio with the shape of the Heisenberg cell, recovering $a_{\delta p}$ at $\theta = 0$ and $a_{\delta x}$ at $\theta = \pi/2$}
 \label{fig:de_gosson_cells}
 \end{figure}
 
