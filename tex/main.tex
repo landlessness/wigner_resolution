@@ -32,18 +32,21 @@
 \date{\today}
 
 \begin{abstract}
-Phase-space formulations of quantum mechanics usually ignore that resolution in the $(x,p)$ plane is bounded below by Planck's quantum of action. In the Wigner formulation, the justification is that even though the quasi-probability distribution is defined pointwise, its negative values carry physical structure. We identify the characteristic scales of Zurek as exactly the axes of a family of de Gosson quantum blobs. Inscribed within the state's Heisenberg cell of action capacity $\pi \Delta x \Delta p \ge h/2$, these blobs are bitangent to the cell, deforming continuously under rotation to maintain constant action $h/2$. Integrating Planck-scale convolutions of the Wigner function across all angles yields a non-negative portrait with sub-Planck resolution $\pi\hbar^2/(\Delta x\,\Delta p)$.
+Phase-space formulations of quantum mechanics usually ignore that resolution in the $(x,p)$ plane is bounded below by Planck's quantum of action. In the Wigner formulation, the justification is that even though the quasi-probability distribution is defined pointwise, its negative values carry physical structure. We identify the characteristic scales of Zurek as exactly the axes of a family of de Gosson quantum blobs. Inscribed within the state's Heisenberg cell of action capacity $\pi \Delta x \Delta p \ge h/2$, these blobs are bitangent to the cell, deforming with the capacity and across the rotation angle to maintain constant action $h/2$. Integrating convolutions of the Wigner function with these Planck-scale blobs yields a non-negative portrait with sub-Planck resolution $\pi\hbar^2/(\Delta x\,\Delta p)$.
 \end{abstract}
 
 \keywords{Phase space formulation of quantum mechanics, Wigner functions, Uncertainty principle, Symplectic geometry, Schrödinger cat states}
 
-
 \maketitle
+
+% ===============================================================================
+%  OPENING
+% ===============================================================================
+The Wigner function represents a quantum state in phase space~\cite{wigner1932,hillery1984}. Its negativity is a resource for quantum advantage~\cite{veitch2012,marieisert2012} and has been characterized by several quasi-probability measures~\cite{kenfack2004}. A non-negative portrait admits a literal probability interpretation in phase space~\cite{husimi1940,cartwright1976,degosson2005bullsci} and supports classical sampling of quantum dynamics~\cite{polkovnikov2010}. This letter develops the non-negative portrait at the resolution permitted by the state's action capacity.
 
 % ===============================================================================
 %  FIGURES
 % ===============================================================================
-
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/zurek_blobs.pdf}
@@ -71,12 +74,6 @@ Phase-space formulations of quantum mechanics usually ignore that resolution in 
 \caption{\textbf{Cat states.} The four states are the 2-cat, the 3-cat, the 4-cat, and the Zurek compass~\cite{zurek2001,cordero2018}. The columns are as in Fig.~\ref{fig:eigen}. The 4-cat and Zurek-compass states differ by a $\pi/4$ rotation in phase space. $\widetilde W$ in column 5 is rotation-invariant under the family integral.}
 \label{fig:cat}
 \end{figure*}
-
-% ===============================================================================
-%  OPENING
-% ===============================================================================
-
-The Wigner function represents a quantum state in phase space~\cite{wigner1932,hillery1984}. Its negativity is a resource for quantum advantage~\cite{veitch2012,marieisert2012}. A non-negative portrait admits a literal probability interpretation in phase space~\cite{husimi1940,cartwright1976,degosson2005bullsci} and supports classical sampling of quantum dynamics~\cite{polkovnikov2010}. This letter develops the non-negative portrait at the resolution permitted by the state's action capacity.
 
 % ===============================================================================
 %  THE PHASE-SPACE CELLS
@@ -141,7 +138,7 @@ The phase-space portrait of the state at the resolution of its own action capaci
 \end{equation}
 $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. The portrait $\widetilde W$ is non-negative pointwise.
 
-$\widetilde W$ varies on scales no smaller than the ellipse with semi-axes $\delta x$ and $\delta p$, the quorum cell, named after the quorum of observables in optical tomography~\cite{darianomacconeparis2001}, of action
+$\widetilde W$ varies on scales no smaller than the ellipse with semi-axes $\delta x$ and $\delta p$, the quorum cell $\tilde{a}$, named after the quorum of observables in optical tomography~\cite{darianomacconeparis2001}, of action
 \begin{equation}
 \tilde a = \pi\,\delta x\,\delta p.
 \label{eq:tildea}
