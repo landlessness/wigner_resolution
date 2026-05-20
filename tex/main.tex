@@ -42,7 +42,7 @@ Phase-space formulations of quantum mechanics usually ignore that resolution in 
 % ===============================================================================
 %  OPENING
 % ===============================================================================
-The Wigner function represents a quantum state in phase space~\cite{wigner1932,hillery1984}. Its negativity, forced by pointwise resolution~\cite{hudson1974}, is a resource for quantum advantage~\cite{veitch2012,marieisert2012} and has been characterized by several quasi-probability measures~\cite{kenfack2004}. A non-negative portrait admits a literal probability interpretation in phase space~\cite{husimi1940,cartwright1976,degosson2005bullsci} and supports classical sampling of quantum dynamics~\cite{polkovnikov2010}. This letter develops the non-negative portrait at the resolution permitted by the state's action capacity.
+The Wigner function represents a quantum state in phase space~\cite{wigner1932,hillery1984}. It is defined pointwise, below Planck's quantum of action, and Hudson's theorem forces it negative there~\cite{hudson1974}. Its negativity is a resource for quantum advantage~\cite{veitch2012,marieisert2012} and has been characterized by several quasi-probability measures~\cite{kenfack2004}. A non-negative portrait admits a literal probability interpretation in phase space~\cite{husimi1940,cartwright1976,degosson2005bullsci} and supports classical sampling of quantum dynamics~\cite{polkovnikov2010}. This letter develops the non-negative portrait at the resolution permitted by the state's action capacity.
 
 % ===============================================================================
 %  FIGURES
@@ -87,8 +87,7 @@ A = \pi\,\Delta x\,\Delta p \ge h/2.
 % ===============================================================================
 %  ZUREK SCALES AS A FAMILY OF DE GOSSON BLOBS
 % ===============================================================================
-
-Zurek derived two resolution scales from the action capacity, $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$~\cite{zurek2001}. We identify these as the principal axes of a  family of de Gosson quantum blobs. These blobs are inscribed within the Heisenberg cell and bitangent to it (Fig.~\ref{fig:zurek_blobs}),
+Wigner negativity carries physical structure at small scales. Zurek located these scales at $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$, set by the state's action capacity~\cite{zurek2001}. We identify these as the principal axes of a family of de Gosson quantum blobs. These blobs are inscribed within the Heisenberg cell and bitangent to it (Fig.~\ref{fig:zurek_blobs}),
 \begin{equation}
 a_{\theta=0} = \pi\,\Delta x\,\delta p = h/2, \qquad a_{\pi/2} = \pi\,\delta x\,\Delta p = h/2.
 \label{eq:principal_axis_cells}
@@ -126,7 +125,7 @@ with $x_\theta = x\cos\theta + p\sin\theta$ and $p_\theta = -x\sin\theta + p\cos
 P_\theta(x,p) = (W * K_\theta)(x,p).
 \label{eq:Ptheta}
 \end{equation}
-The bitangent kernel $K_\theta$ at quadrature angle $\theta$ has action $h/2$. Pointwise resolution forces $W$ negative~\cite{hudson1974}. Convolving with a Gaussian of action $\ge h/2$ removes the cause and yields a non-negative function~\cite{cartwright1976,degosson2005bullsci,dragoman2005phasespace,cordero2018}, so $P_\theta$ is non-negative everywhere.
+The bitangent kernel $K_\theta$ at quadrature angle $\theta$ has action $h/2$. Pointwise resolution forces $W$ negative~\cite{hudson1974}. Convolving with a Gaussian of action $\ge h/2$ lifts the resolution to Planck's floor and yields a non-negative function~\cite{cartwright1976,degosson2005bullsci,dragoman2005phasespace,cordero2018}, so $P_\theta$ is non-negative everywhere.
 
 % ===============================================================================
 %  THE CONVOLVED PORTRAIT
@@ -143,7 +142,7 @@ $\widetilde W$ has structure at the characteristic scale of the quorum cell $\ti
 \tilde a = \pi\,\delta x\,\delta p.
 \label{eq:tildea}
 \end{equation}
-The quorum cell is the common interior of the bitangent family, with $\tilde a = \pi\hbar^2/(\Delta x\,\Delta p)$. Zurek's scale $a_Z = \tilde a/\pi = \hbar^2/(\Delta x\,\Delta p)$ is the same scale recovered here from the symplectic geometry of the state.
+The quorum cell is the common interior of the deforming bitangent family, with $\tilde a = \pi\hbar^2/(\Delta x\,\Delta p)$.
 
 Without loss of generality, the treatment here addresses one spatial dimension with covariance ellipsoid aligned to principal axes. The construction extends to rotated ellipsoids through the symplectic covariance of the bitangent family~\cite{cordero2018}, and to higher dimensions through the symplectic capacity of the full Robertson--Schr\"odinger covariance ellipsoid~\cite{robertson1929,schrodinger1930,degosson2013qblobs},
 \begin{equation}
@@ -154,14 +153,15 @@ Without loss of generality, the treatment here addresses one spatial dimension w
 %===============================================================================
 %  NUMERICAL RESULTS
 %================================================================
-Figures~\ref{fig:eigen} and~\ref{fig:cat} show numerical results across eight states. $\widetilde W$ is non-negative across all eight. The positive lobes of $W$ appear in $\widetilde W$ with the same count and location at the resolution of the quorum cell $\tilde{a}$.
+Figures~\ref{fig:eigen} and~\ref{fig:cat} show numerical results across eight states. $\widetilde W$ is non-negative across all eight. By inspection, the positive lobes of $W$ appear in $\widetilde W$ with the same count and location at the resolution of the quorum cell $\tilde{a}$.
 
 % ===============================================================================
 %  DISCUSSION
 % ===============================================================================
-The action capacity $A = \pi \Delta x \Delta p$ grows unbounded, the micro-to-macro transition Heisenberg~\cite{heisenberg1927} and Bohr~\cite{bohr1928} identified as requiring special care. The bitangent blob does not grow. Its action is $h/2$ across every $A \ge h/2$, and its resolution $\delta = \hbar/\Delta$ sharpens with the capacity.
 
-Capacity and resolution pair across the conjugates, $\Delta x$ setting $\delta p$ and $\Delta p$ setting $\delta x$. Squeezing of experimental practice~\cite{walls1983}, read as the saturated $\Delta x \Delta p = \hbar/2$, is action capacity feeding conjugate resolution $\delta x = \hbar/\Delta p$. Capacity along one axis is resolution along the other.
+The uncertainty product $\sigma_x \sigma_p$ grows unbounded, the micro-to-macro transition Heisenberg~\cite{heisenberg1927} and Bohr~\cite{bohr1928} identified as requiring special care. The bitangent blob does not. Its action is $h/2$ across every $A \ge h/2$, and its resolution $\delta = \hbar/\Delta$ sharpens with capacity.
+
+Capacity along one axis sets resolution along the other, $\Delta x$ to $\delta p$ and $\Delta p$ to $\delta x$. Squeezing of experimental practice~\cite{walls1983} saturates the uncertainty product, $\sigma_x \sigma_p = \hbar/2$. This is action capacity feeding conjugate resolution, $\delta x = \hbar/\Delta p$. Capacity along one axis is resolution along the other.
 
 A Schr\"odinger cat with $\Delta x \sim 10$ cm and $\Delta p \sim 1$ kg$\cdot$m/s has positional resolution $\delta x = \hbar/\Delta p \sim 10^{-34}$ m, twenty-four orders of magnitude below the size of the single radioactive atom that triggers its apparatus~\cite{schrodinger1935trimmer}. The correspondence principle follows not from the heuristic $h \to 0$, but from the physical $A \to \infty$.
 
