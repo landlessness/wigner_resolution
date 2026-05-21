@@ -50,14 +50,14 @@ The Wigner function represents a quantum state in phase space~\cite{wigner1932,h
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/zurek_blobs.pdf}
-\caption{\textbf{Heisenberg cell, principal bitangent blobs, quorum cell.} The Heisenberg cell is the state's covariance ellipsoid, of action capacity $A = \pi \Delta x \Delta p \ge h/2$. The bitangent blob family of Fig.~\ref{fig:bitangent_blobs} has two members at the principal axes: $a_{\theta=0} = \pi \Delta x \delta p = h/2$ and $a_{\pi/2} = \pi \delta x \Delta p = h/2$. Zurek's relations $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ give both semi-axes of each blob exactly. The capacities $\Delta x, \Delta p$ run along the major axes, the resolutions $\delta x, \delta p$ along the minor. The quorum cell $\tilde a$ is the intersection of the deforming bitangent family, an ellipse with semi-axes $\delta x, \delta p$ and action $\tilde a = \pi \delta x \delta p \le h/2$.}
+\caption{\textbf{Heisenberg cell, principal bitangent blobs, quorum cell.} The Heisenberg cell is the state's covariance ellipsoid, of action capacity $A = \pi \Delta x \Delta p \ge h/2$. The bitangent blob family of Fig.~\ref{fig:bitangent_blobs} has two members at the principal axes: $a_{\theta=0} = \pi \, \Delta x \, \delta p = h/2$ and $a_{\pi/2} = \pi \,\delta x \,\Delta p = h/2$. Zurek's relations $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ give both semi-axes of each blob exactly. The capacities $\Delta x, \Delta p$ run along the major axes, the resolutions $\delta x, \delta p$ along the minor. The quorum cell $\tilde a$ is the intersection of the deforming bitangent family, an ellipse with semi-axes $\delta x, \delta p$ and action $\tilde a = \pi \delta x \delta p \le h/2$.}
 \label{fig:zurek_blobs}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/bitangent_blobs.pdf}
-\caption{\textbf{Quadrature family of bitangent blobs.} The bitangent blob $a_\theta$ at quadrature angle $\theta$ is a member of the family inscribed within the Heisenberg cell and bitangent to it, deforming across $\theta$ to maintain constant action $a_\theta = \pi r_\parallel(\theta) r_\perp(\theta) = h/2$. The semi-axes are reciprocal in $\hbar$, with $r_\parallel(\theta) r_\perp(\theta) = \hbar$. At the principal angles $\theta = 0$ and $\theta = \pi/2$, the family recovers $a_{\theta=0}$ and $a_{\pi/2}$ of Fig.~\ref{fig:zurek_blobs}.}
+\caption{\textbf{Quadrature family of bitangent blobs.} The bitangent blob $a_\theta$ at quadrature angle $\theta$ is a member of the family inscribed within the Heisenberg cell and bitangent to it, deforming across $\theta$ to maintain constant action $a_\theta = \pi \, r_\parallel(\theta) \, r_\perp(\theta) = h/2$. The semi-axes are reciprocal in $\hbar$, with $r_\parallel(\theta) \,r_\perp(\theta) = \hbar$. At the principal angles $\theta = 0$ and $\theta = \pi/2$, the family recovers $a_{\theta=0}$ and $a_{\pi/2}$ of Fig.~\ref{fig:zurek_blobs}.}
 \label{fig:bitangent_blobs}
 \end{figure}
 
@@ -78,7 +78,7 @@ The Wigner function represents a quantum state in phase space~\cite{wigner1932,h
 % ===============================================================================
 %  THE PHASE-SPACE CELLS
 % ===============================================================================
-The state is constrained by the uncertainty principle $\sigma_x\,\sigma_p \ge \hbar/2$~\cite{robertson1929,schrodinger1930}, where $\sigma_x, \sigma_p$ are the standard deviations of position and momentum. Symplectic capacity measures phase-space regions in de Gosson's framework~\cite{degosson2009camel}. The state's covariance ellipsoid, with semi-axes $\Delta x = \sqrt{2}\,\sigma_x$ and $\Delta p = \sqrt{2}\,\sigma_p$, has symplectic capacity $\pi \Delta x \Delta p$, the action capacity of the state. The ellipsoid is its Heisenberg cell (Figs.~\ref{fig:zurek_blobs},~\ref{fig:bitangent_blobs}),
+The state is constrained by the uncertainty principle $\sigma_x\,\sigma_p \ge \hbar/2$~\cite{robertson1929,schrodinger1930}, where $\sigma_x, \sigma_p$ are the standard deviations of position and momentum. Symplectic capacity measures phase-space regions following de Gosson~\cite{degosson2009camel}. The state's covariance ellipsoid, with semi-axes $\Delta x = \sqrt{2}\,\sigma_x$ and $\Delta p = \sqrt{2}\,\sigma_p$, has symplectic capacity $\pi \Delta x \Delta p$, the action capacity of the state. The ellipsoid is its Heisenberg cell (Figs.~\ref{fig:zurek_blobs},~\ref{fig:bitangent_blobs}),
 \begin{equation}
 A = \pi\,\Delta x\,\Delta p \ge h/2.
 \label{eq:extended_cell}
@@ -142,7 +142,7 @@ $\widetilde W$ has structure at the characteristic scale of the quorum cell, nam
 \tilde a = \frac{\pi\hbar^2}{\Delta x\,\Delta p}.
 \label{eq:tildea}
 \end{equation}
-The structures are visible in column 5 of Figs.~\ref{fig:eigen} and~\ref{fig:cat}.
+The structures are visible in column 5 of Figs.~\ref{fig:eigen} and~\ref{fig:cat}. The Heisenberg cell and the quorum cell are reciprocal at the Planck quantum, $A\,\tilde a = (h/2)^2$.
 
 Without loss of generality, the treatment here addresses one spatial dimension with covariance ellipsoid aligned to principal axes. The construction extends to rotated ellipsoids through the symplectic covariance of the bitangent family~\cite{cordero2018}, and to higher dimensions through the symplectic capacity bounded by the Robertson--Schr\"odinger inequality~\cite{robertson1929,schrodinger1930,degosson2013qblobs},
 \begin{equation}
