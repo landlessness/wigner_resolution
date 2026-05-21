@@ -32,7 +32,7 @@
 \date{\today}
 
 \begin{abstract}
-Phase-space formulations of quantum mechanics usually ignore that resolution is bounded below by Planck's quantum of action. In the Wigner formulation, the justification is that even though pointwise resolution forces the quasi-probability negative, those negative values carry physical structure. Zurek located that structure at scales set by the state's action capacity. We identify those scales as exactly the axes of de Gosson quantum blobs. Inscribed within the state's elliptical Heisenberg cell of action capacity $\pi \Delta x \Delta p$, these blobs form a family bitangent to the cell, deforming at constant action $h/2$. To enforce Planck's boundary from below, integrating convolutions of the Wigner function with this $h/2$ family yields a non-negative portrait with sub-Planck resolution $\pi\hbar^2/(\Delta x\,\Delta p)$, sharpening with capacity.
+Phase-space formulations of quantum mechanics usually ignore that resolution is bounded below by Planck's quantum of action. In the Wigner formulation, the justification is that even though pointwise resolution forces the quasi-probability negative, those negative values carry physical structure. Zurek located that structure at scales set by the state's action capacity. We identify those scales as exactly the axes of de Gosson quantum blobs. Inscribed within the state's elliptical Heisenberg cell of action capacity $\pi \Delta x \Delta p$, these blobs form a family bitangent to the cell, deforming at constant action $h/2$. To enforce Planck's floor from below, integrating convolutions of the Wigner function with this $h/2$ family yields a non-negative portrait with sub-Planck resolution $\pi\hbar^2/(\Delta x\,\Delta p)$, sharpening with capacity.
 \end{abstract}
 
 \keywords{Phase space formulation of quantum mechanics, Wigner functions, Uncertainty principle, Symplectic geometry, Schrödinger cat states}
@@ -50,7 +50,7 @@ The Wigner function represents a quantum state in phase space~\cite{wigner1932,h
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/zurek_blobs.pdf}
-\caption{\textbf{Heisenberg cell, principal bitangent blobs, quorum cell.} The Heisenberg cell is the state's covariance ellipsoid, of action capacity $A = \pi \Delta x \Delta p \ge h/2$. The bitangent blob family of Fig.~\ref{fig:bitangent_blobs} has two members at the principal axes: $a_{\theta=0} = \pi \, \Delta x \, \delta p = h/2$ and $a_{\pi/2} = \pi \,\delta x \,\Delta p = h/2$. Zurek's relations $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ give both semi-axes of each blob exactly. The capacities $\Delta x, \Delta p$ run along the major axes, the resolutions $\delta x, \delta p$ along the minor. The quorum cell $\tilde a$ is the intersection of the deforming bitangent family, an ellipse with semi-axes $\delta x, \delta p$ and action $\tilde a = \pi \delta x \delta p \le h/2$.}
+\caption{\textbf{Heisenberg cell, principal bitangent blobs, quorum cell.} The Heisenberg cell is the state's covariance ellipsoid, of action capacity $A = \pi \Delta x \Delta p \ge h/2$. The bitangent blob family of Fig.~\ref{fig:bitangent_blobs} has two members at the principal axes: $a_{\theta=0} = \pi \, \Delta x \, \delta p = h/2$ and $a_{\pi/2} = \pi \,\delta x \,\Delta p = h/2$. Zurek's relations $\delta x = \hbar/\Delta p$ and $\delta p = \hbar/\Delta x$ give both semi-axes of each blob exactly. The capacities $\Delta x, \Delta p$ run along the major axes, the resolutions $\delta x, \delta p$ along the minor. The quorum cell $\tilde a$ is inscribed within both blobs and bitangent to each, an ellipse with semi-axes $\delta x, \delta p$ and action $\tilde a = \pi \delta x \delta p \le h/2$.}
 \label{fig:zurek_blobs}
 \end{figure}
 
@@ -137,12 +137,12 @@ Integrating $P_\theta$ over the bitangent family gives the phase-space portrait 
 \end{equation}
 $P_\theta(x,p) \ge 0$ for every $\theta$, and a non-negative integrand integrates to a non-negative function. $\widetilde W \ge 0$ everywhere. Tomographic reconstruction inverts marginals to recover $W$ pointwise~\cite{vogelrisken1989,lvovsky2009}; the construction here convolves $W$ with $K_\theta$ and integrates over $\theta$.
 
-$\widetilde W$ has structure at the characteristic scale of the quorum cell, named after the quorum of observables in optical tomography~\cite{darianomacconeparis2001}. The quorum cell is the common interior of the deforming bitangent family, an ellipse with semi-axes $\delta x$ and $\delta p$ and resolution $\tilde a = \pi\,\delta x\,\delta p$ (Fig.~\ref{fig:zurek_blobs}), equivalently
+$\widetilde W$ has structure at the characteristic scale of the quorum cell, named after the quorum of observables in optical tomography~\cite{darianomacconeparis2001}. The quorum cell is the symplectic polar dual of the Heisenberg cell~\cite{degosson2022polar}, with capacity along one axis setting resolution along the other. Inscribed within the principal blobs and bitangent to each, it is an ellipse with semi-axes $\delta x$ and $\delta p$ and resolution $\tilde a = \pi\,\delta x\,\delta p$ (Fig.~\ref{fig:zurek_blobs}), equivalently
 \begin{equation}
 \tilde a = \frac{\pi\hbar^2}{\Delta x\,\Delta p}.
 \label{eq:tildea}
 \end{equation}
-The structures are visible in column 5 of Figs.~\ref{fig:eigen} and~\ref{fig:cat}. The Heisenberg cell and the quorum cell are reciprocal at the Planck quantum, $A\,\tilde a = (h/2)^2$.
+The structures are visible in column 5 of Figs.~\ref{fig:eigen} and~\ref{fig:cat}. The Heisenberg cell and the quorum cell are reciprocal at action $h/2$, $A\,\tilde a = (h/2)^2$.
 
 Without loss of generality, the treatment here addresses one spatial dimension with covariance ellipsoid aligned to principal axes. The construction extends to rotated ellipsoids through the symplectic covariance of the bitangent family~\cite{cordero2018}, and to higher dimensions through the symplectic capacity bounded by the Robertson--Schr\"odinger inequality~\cite{robertson1929,schrodinger1930,degosson2013qblobs},
 \begin{equation}
@@ -153,7 +153,7 @@ Without loss of generality, the treatment here addresses one spatial dimension w
 %===============================================================================
 %  NUMERICAL RESULTS
 %================================================================
-Figures~\ref{fig:eigen} and~\ref{fig:cat} show numerical results across eight states. $\widetilde W$ is non-negative across all eight. By inspection, the positive lobes of $W$ (column 1) appear in $\widetilde W$ (column 5) with the same count and location at the resolution of the quorum cell $\tilde{a}$.
+Figures~\ref{fig:eigen} and~\ref{fig:cat} show numerical results across eight states. $\widetilde W$ is non-negative across all eight. The positive lobes of $W$ (column 1) appear in $\widetilde W$ (column 5) with the same count and location at the resolution of the quorum cell $\tilde a$.
 
 % ===============================================================================
 %  DISCUSSION
